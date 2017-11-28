@@ -97,9 +97,9 @@ class AnagramSearchViewController: UIViewController {
 
   private func pushAnagramCheckViewController() {
     let viewModel = AnagramCheckViewModel(word: self.viewModel.mostRecentWord())
-//    let viewController = AnagramSearchHistoryViewController(withViewModel: viewModel)
+    let viewController = AnagramCheckViewController(withViewModel: viewModel)
 
-//    navigationController?.pushViewController(viewController, animated: true)
+    navigationController?.pushViewController(viewController, animated: true)
   }
 
   private func pushAnagramSearchHistoryViewController() {
