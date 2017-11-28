@@ -28,7 +28,7 @@ class AnagramSearchViewController: UIViewController {
     anagramSearchInputView.delegate = self
 
     return anagramSearchInputView
-    }()
+  }()
 
   private lazy var resultView: AnagramSearchResultView = { [weak self] in
     let anagramSearchResultView = AnagramSearchResultView()
