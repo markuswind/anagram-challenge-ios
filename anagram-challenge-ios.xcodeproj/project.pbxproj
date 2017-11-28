@@ -16,6 +16,11 @@
 		80B7DFCB1FCD732C003B6E56 /* String+FirstUpperCased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */; };
 		80B7DFCD1FCD7377003B6E56 /* AnagramCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */; };
 		80B7DFCF1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */; };
+		80B7DFD11FCD744D003B6E56 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFD01FCD744D003B6E56 /* NormalButton.swift */; };
+		80B7DFD31FCD745A003B6E56 /* NormalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFD21FCD745A003B6E56 /* NormalTextField.swift */; };
+		80B7DFD61FCD74DE003B6E56 /* ResultHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFD51FCD74DE003B6E56 /* ResultHeaderLabel.swift */; };
+		80B7DFD81FCD74F9003B6E56 /* AnagramSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFD71FCD74F9003B6E56 /* AnagramSearchInputView.swift */; };
+		80B7DFDA1FCD756F003B6E56 /* AnagramSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFD91FCD756F003B6E56 /* AnagramSearchResultView.swift */; };
 		80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,11 @@
 		80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstUpperCased.swift"; sourceTree = "<group>"; };
 		80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckViewModel.swift; sourceTree = "<group>"; };
 		80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchHistoryViewModel.swift; sourceTree = "<group>"; };
+		80B7DFD01FCD744D003B6E56 /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
+		80B7DFD21FCD745A003B6E56 /* NormalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTextField.swift; sourceTree = "<group>"; };
+		80B7DFD51FCD74DE003B6E56 /* ResultHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHeaderLabel.swift; sourceTree = "<group>"; };
+		80B7DFD71FCD74F9003B6E56 /* AnagramSearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchInputView.swift; sourceTree = "<group>"; };
+		80B7DFD91FCD756F003B6E56 /* AnagramSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchResultView.swift; sourceTree = "<group>"; };
 		80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +125,21 @@
 		801ABFD11FCD6FDF00441769 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				80B7DFD41FCD74AF003B6E56 /* AnagramSearch */,
+				80B7DFD01FCD744D003B6E56 /* NormalButton.swift */,
+				80B7DFD21FCD745A003B6E56 /* NormalTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		80B7DFD41FCD74AF003B6E56 /* AnagramSearch */ = {
+			isa = PBXGroup;
+			children = (
+				80B7DFD71FCD74F9003B6E56 /* AnagramSearchInputView.swift */,
+				80B7DFD91FCD756F003B6E56 /* AnagramSearchResultView.swift */,
+				80B7DFD51FCD74DE003B6E56 /* ResultHeaderLabel.swift */,
+			);
+			path = AnagramSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,14 +213,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B7DFD61FCD74DE003B6E56 /* ResultHeaderLabel.swift in Sources */,
+				80B7DFD31FCD745A003B6E56 /* NormalTextField.swift in Sources */,
 				80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */,
+				80B7DFD81FCD74F9003B6E56 /* AnagramSearchInputView.swift in Sources */,
 				80B7DFCF1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift in Sources */,
 				801ABFBE1FCD6F4000441769 /* AnagramSearchViewController.swift in Sources */,
 				80B7DFCD1FCD7377003B6E56 /* AnagramCheckViewModel.swift in Sources */,
+				80B7DFDA1FCD756F003B6E56 /* AnagramSearchResultView.swift in Sources */,
 				801ABFD51FCD70FB00441769 /* NavigationController.swift in Sources */,
 				801ABFD31FCD70B600441769 /* StyleConstants.swift in Sources */,
 				801ABFBC1FCD6F4000441769 /* AppDelegate.swift in Sources */,
 				80B7DFCB1FCD732C003B6E56 /* String+FirstUpperCased.swift in Sources */,
+				80B7DFD11FCD744D003B6E56 /* NormalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
