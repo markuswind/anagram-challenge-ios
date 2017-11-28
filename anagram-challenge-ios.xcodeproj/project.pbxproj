@@ -12,6 +12,7 @@
 		801ABFC31FCD6F4000441769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC21FCD6F4000441769 /* Assets.xcassets */; };
 		801ABFC61FCD6F4000441769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */; };
 		801ABFD31FCD70B600441769 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFD21FCD70B600441769 /* StyleConstants.swift */; };
+		801ABFD51FCD70FB00441769 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFD41FCD70FB00441769 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		801ABFC51FCD6F4000441769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801ABFC71FCD6F4000441769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801ABFD21FCD70B600441769 /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
+		801ABFD41FCD70FB00441769 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				801ABFBD1FCD6F4000441769 /* ViewController.swift */,
+				801ABFD41FCD70FB00441769 /* NavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				801ABFBE1FCD6F4000441769 /* ViewController.swift in Sources */,
+				801ABFD51FCD70FB00441769 /* NavigationController.swift in Sources */,
 				801ABFD31FCD70B600441769 /* StyleConstants.swift in Sources */,
 				801ABFBC1FCD6F4000441769 /* AppDelegate.swift in Sources */,
 			);

@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 
-  private func createRootNavigationController() -> UINavigationController {
-    let navigationController = UINavigationController(rootViewController: ViewController())
+  private func createRootNavigationController() -> NavigationController {
+    let navigationController = NavigationController(rootViewController: ViewController())
 
     return navigationController
   }
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func createWindow(rootViewController: UIViewController) -> UIWindow {
     let window = UIWindow(frame: UIScreen.main.bounds)
 
-    window.tintColor = UIColor.red
+    window.tintColor = StyleConstants.colors.primary
     window.rootViewController = rootViewController
 
     return window
