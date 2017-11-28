@@ -13,6 +13,11 @@
 		801ABFC61FCD6F4000441769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */; };
 		801ABFD31FCD70B600441769 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFD21FCD70B600441769 /* StyleConstants.swift */; };
 		801ABFD51FCD70FB00441769 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFD41FCD70FB00441769 /* NavigationController.swift */; };
+		8092285D1FCD9E0500B212B0 /* anagram_challenge_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8092285C1FCD9E0500B212B0 /* anagram_challenge_iosTests.swift */; };
+		809228641FCD9E7000B212B0 /* AnagramCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */; };
+		809228651FCD9E7300B212B0 /* AnagramSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */; };
+		809228661FCD9E7600B212B0 /* AnagramSearchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */; };
+		809228671FCD9EF200B212B0 /* String+FirstUpperCased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */; };
 		80B7DFCB1FCD732C003B6E56 /* String+FirstUpperCased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */; };
 		80B7DFCD1FCD7377003B6E56 /* AnagramCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */; };
 		80B7DFCF1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */; };
@@ -28,6 +33,16 @@
 		80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8092285F1FCD9E0500B212B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 801ABFB01FCD6F4000441769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 801ABFB71FCD6F4000441769;
+			remoteInfo = "anagram-challenge-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		801ABFB81FCD6F4000441769 /* anagram-challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "anagram-challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		801ABFBB1FCD6F4000441769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +52,9 @@
 		801ABFC71FCD6F4000441769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801ABFD21FCD70B600441769 /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
 		801ABFD41FCD70FB00441769 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		8092285A1FCD9E0500B212B0 /* anagram-challenge-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "anagram-challenge-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8092285C1FCD9E0500B212B0 /* anagram_challenge_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anagram_challenge_iosTests.swift; sourceTree = "<group>"; };
+		8092285E1FCD9E0500B212B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstUpperCased.swift"; sourceTree = "<group>"; };
 		80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckViewModel.swift; sourceTree = "<group>"; };
 		80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchHistoryViewModel.swift; sourceTree = "<group>"; };
@@ -60,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		809228571FCD9E0500B212B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				801ABFBA1FCD6F4000441769 /* anagram-challenge-ios */,
+				8092285B1FCD9E0500B212B0 /* anagram-challenge-iosTests */,
 				801ABFB91FCD6F4000441769 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				801ABFB81FCD6F4000441769 /* anagram-challenge-ios.app */,
+				8092285A1FCD9E0500B212B0 /* anagram-challenge-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +194,15 @@
 			path = Form;
 			sourceTree = "<group>";
 		};
+		8092285B1FCD9E0500B212B0 /* anagram-challenge-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				8092285C1FCD9E0500B212B0 /* anagram_challenge_iosTests.swift */,
+				8092285E1FCD9E0500B212B0 /* Info.plist */,
+			);
+			path = "anagram-challenge-iosTests";
+			sourceTree = "<group>";
+		};
 		80B7DFD41FCD74AF003B6E56 /* AnagramSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +234,24 @@
 			productReference = 801ABFB81FCD6F4000441769 /* anagram-challenge-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
+		809228591FCD9E0500B212B0 /* anagram-challenge-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 809228611FCD9E0500B212B0 /* Build configuration list for PBXNativeTarget "anagram-challenge-iosTests" */;
+			buildPhases = (
+				809228561FCD9E0500B212B0 /* Sources */,
+				809228571FCD9E0500B212B0 /* Frameworks */,
+				809228581FCD9E0500B212B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				809228601FCD9E0500B212B0 /* PBXTargetDependency */,
+			);
+			name = "anagram-challenge-iosTests";
+			productName = "anagram-challenge-iosTests";
+			productReference = 8092285A1FCD9E0500B212B0 /* anagram-challenge-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +265,11 @@
 					801ABFB71FCD6F4000441769 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+					};
+					809228591FCD9E0500B212B0 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 801ABFB71FCD6F4000441769;
 					};
 				};
 			};
@@ -228,6 +287,7 @@
 			projectRoot = "";
 			targets = (
 				801ABFB71FCD6F4000441769 /* anagram-challenge-ios */,
+				809228591FCD9E0500B212B0 /* anagram-challenge-iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +299,13 @@
 			files = (
 				801ABFC61FCD6F4000441769 /* LaunchScreen.storyboard in Resources */,
 				801ABFC31FCD6F4000441769 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809228581FCD9E0500B212B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +336,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		809228561FCD9E0500B212B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8092285D1FCD9E0500B212B0 /* anagram_challenge_iosTests.swift in Sources */,
+				809228661FCD9E7600B212B0 /* AnagramSearchHistoryViewModel.swift in Sources */,
+				809228671FCD9EF200B212B0 /* String+FirstUpperCased.swift in Sources */,
+				809228641FCD9E7000B212B0 /* AnagramCheckViewModel.swift in Sources */,
+				809228651FCD9E7300B212B0 /* AnagramSearchViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		809228601FCD9E0500B212B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 801ABFB71FCD6F4000441769 /* anagram-challenge-ios */;
+			targetProxy = 8092285F1FCD9E0500B212B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */ = {
@@ -418,6 +505,36 @@
 			};
 			name = Release;
 		};
+		809228621FCD9E0500B212B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "anagram-challenge-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markuswind.anagram-challenge-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/anagram-challenge-ios.app/anagram-challenge-ios";
+			};
+			name = Debug;
+		};
+		809228631FCD9E0500B212B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "anagram-challenge-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markuswind.anagram-challenge-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/anagram-challenge-ios.app/anagram-challenge-ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,6 +552,15 @@
 			buildConfigurations = (
 				801ABFCB1FCD6F4000441769 /* Debug */,
 				801ABFCC1FCD6F4000441769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		809228611FCD9E0500B212B0 /* Build configuration list for PBXNativeTarget "anagram-challenge-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809228621FCD9E0500B212B0 /* Debug */,
+				809228631FCD9E0500B212B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
