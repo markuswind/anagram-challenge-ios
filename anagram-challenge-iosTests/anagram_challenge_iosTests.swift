@@ -19,29 +19,31 @@ class anagram_challenge_iosTests: XCTestCase {
   }
     
   func testAnagramSearchViewModel() {
-    let anagramSearchViewModel = AnagramSearchViewModel()
+    self.measure {
+      let anagramSearchViewModel = AnagramSearchViewModel()
 
-    anagramSearchViewModel.setNewWord(word: "ABC") {
-      XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 6)
-      XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 6)
-      XCTAssertTrue(anagramSearchViewModel.mostRecentWord() == "Abc")
-    }
+      anagramSearchViewModel.setNewWord(word: "ABC") {
+        XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 6)
+        XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 6)
+        XCTAssertTrue(anagramSearchViewModel.mostRecentWord() == "Abc")
+      }
 
-    anagramSearchViewModel.setNewWord(word: "ABBA") {
-      XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 6)
-      XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 6)
-      XCTAssertTrue(anagramSearchViewModel.mostRecentWord() == "Abba")
-    }
+      anagramSearchViewModel.setNewWord(word: "ABBA") {
+        XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 6)
+        XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 6)
+        XCTAssertTrue(anagramSearchViewModel.mostRecentWord() == "Abba")
+      }
 
-    anagramSearchViewModel.setNewWord(word: "HELLO", completion: {
-      XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 60)
-      XCTAssertTrue(anagramSearchViewModel.anagramsData.count == AnagramSearchViewModel.itemsPerPage)
-      XCTAssertTrue(anagramSearchViewModel.mostRecentWord() == "Hello")
+      anagramSearchViewModel.setNewWord(word: "HELLO", completion: {
+        XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 60)
+        XCTAssertTrue(anagramSearchViewModel.anagramsData.count == AnagramSearchViewModel.itemsPerPage)
+        XCTAssertTrue(anagramSearchViewModel.mostRecentWord() == "Hello")
 
-      anagramSearchViewModel.requestNewPageOfAnagrams(completion: {
-        XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 60)
+        anagramSearchViewModel.requestNewPageOfAnagrams(completion: {
+          XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 60)
+        })
       })
-    })
+    }
   }
 
   func testAnagramCheckViewModel() {
@@ -63,9 +65,4 @@ class anagram_challenge_iosTests: XCTestCase {
     XCTAssert(anagramSearchHistoryViewModel.recentWordsData.count == 4)
   }
     
-  func testPerformanceExample() {
-    self.measure {
-    }
-  }
-
 }
