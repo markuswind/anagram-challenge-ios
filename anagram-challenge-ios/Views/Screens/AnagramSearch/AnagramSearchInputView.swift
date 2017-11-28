@@ -26,7 +26,7 @@ class AnagramSearchInputView: UIView {
     normalTextField.delegate = self
 
     return normalTextField
-    }()
+  }()
 
   private let searchButton: NormalButton = {
     let normalButton = NormalButton()
