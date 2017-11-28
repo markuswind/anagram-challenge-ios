@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		801ABFBC1FCD6F4000441769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFBB1FCD6F4000441769 /* AppDelegate.swift */; };
-		801ABFBE1FCD6F4000441769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFBD1FCD6F4000441769 /* ViewController.swift */; };
+		801ABFBE1FCD6F4000441769 /* AnagramSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFBD1FCD6F4000441769 /* AnagramSearchViewController.swift */; };
 		801ABFC31FCD6F4000441769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC21FCD6F4000441769 /* Assets.xcassets */; };
 		801ABFC61FCD6F4000441769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */; };
 		801ABFD31FCD70B600441769 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFD21FCD70B600441769 /* StyleConstants.swift */; };
 		801ABFD51FCD70FB00441769 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFD41FCD70FB00441769 /* NavigationController.swift */; };
+		80B7DFCB1FCD732C003B6E56 /* String+FirstUpperCased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */; };
+		80B7DFCD1FCD7377003B6E56 /* AnagramCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */; };
+		80B7DFCF1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */; };
+		80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		801ABFB81FCD6F4000441769 /* anagram-challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "anagram-challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		801ABFBB1FCD6F4000441769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		801ABFBD1FCD6F4000441769 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		801ABFBD1FCD6F4000441769 /* AnagramSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchViewController.swift; sourceTree = "<group>"; };
 		801ABFC21FCD6F4000441769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801ABFC51FCD6F4000441769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801ABFC71FCD6F4000441769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801ABFD21FCD70B600441769 /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
 		801ABFD41FCD70FB00441769 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstUpperCased.swift"; sourceTree = "<group>"; };
+		80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckViewModel.swift; sourceTree = "<group>"; };
+		80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchHistoryViewModel.swift; sourceTree = "<group>"; };
+		80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		801ABFCE1FCD6FC600441769 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				80B7DFCA1FCD732C003B6E56 /* String+FirstUpperCased.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -87,7 +96,7 @@
 		801ABFCF1FCD6FCB00441769 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				801ABFBD1FCD6F4000441769 /* ViewController.swift */,
+				801ABFBD1FCD6F4000441769 /* AnagramSearchViewController.swift */,
 				801ABFD41FCD70FB00441769 /* NavigationController.swift */,
 			);
 			path = ViewControllers;
@@ -96,6 +105,9 @@
 		801ABFD01FCD6FD200441769 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				80B7DFCC1FCD7377003B6E56 /* AnagramCheckViewModel.swift */,
+				80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */,
+				80B7DFCE1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,10 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801ABFBE1FCD6F4000441769 /* ViewController.swift in Sources */,
+				80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */,
+				80B7DFCF1FCD73FA003B6E56 /* AnagramSearchHistoryViewModel.swift in Sources */,
+				801ABFBE1FCD6F4000441769 /* AnagramSearchViewController.swift in Sources */,
+				80B7DFCD1FCD7377003B6E56 /* AnagramCheckViewModel.swift in Sources */,
 				801ABFD51FCD70FB00441769 /* NavigationController.swift in Sources */,
 				801ABFD31FCD70B600441769 /* StyleConstants.swift in Sources */,
 				801ABFBC1FCD6F4000441769 /* AppDelegate.swift in Sources */,
+				80B7DFCB1FCD732C003B6E56 /* String+FirstUpperCased.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

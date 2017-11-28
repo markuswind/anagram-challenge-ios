@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   private func createRootNavigationController() -> NavigationController {
-    let navigationController = NavigationController(rootViewController: ViewController())
+    let anagramSearchViewController = AnagramSearchViewController()
+    let navigationController = NavigationController(rootViewController: anagramSearchViewController)
 
     return navigationController
   }
@@ -38,4 +39,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
 }
-
