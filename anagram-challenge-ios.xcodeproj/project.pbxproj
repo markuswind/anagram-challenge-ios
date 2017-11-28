@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		801ABFBC1FCD6F4000441769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFBB1FCD6F4000441769 /* AppDelegate.swift */; };
 		801ABFBE1FCD6F4000441769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801ABFBD1FCD6F4000441769 /* ViewController.swift */; };
-		801ABFC11FCD6F4000441769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFBF1FCD6F4000441769 /* Main.storyboard */; };
 		801ABFC31FCD6F4000441769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC21FCD6F4000441769 /* Assets.xcassets */; };
 		801ABFC61FCD6F4000441769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		801ABFB81FCD6F4000441769 /* anagram-challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "anagram-challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		801ABFBB1FCD6F4000441769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801ABFBD1FCD6F4000441769 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		801ABFC01FCD6F4000441769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		801ABFC21FCD6F4000441769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801ABFC51FCD6F4000441769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801ABFC71FCD6F4000441769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +52,53 @@
 		801ABFBA1FCD6F4000441769 /* anagram-challenge-ios */ = {
 			isa = PBXGroup;
 			children = (
-				801ABFBB1FCD6F4000441769 /* AppDelegate.swift */,
-				801ABFBD1FCD6F4000441769 /* ViewController.swift */,
-				801ABFBF1FCD6F4000441769 /* Main.storyboard */,
-				801ABFC21FCD6F4000441769 /* Assets.xcassets */,
-				801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */,
 				801ABFC71FCD6F4000441769 /* Info.plist */,
+				801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */,
+				801ABFBB1FCD6F4000441769 /* AppDelegate.swift */,
+				801ABFC21FCD6F4000441769 /* Assets.xcassets */,
+				801ABFCE1FCD6FC600441769 /* Categories */,
+				801ABFCD1FCD6FC100441769 /* Helpers */,
+				801ABFCF1FCD6FCB00441769 /* ViewControllers */,
+				801ABFD01FCD6FD200441769 /* ViewModels */,
+				801ABFD11FCD6FDF00441769 /* Views */,
 			);
 			path = "anagram-challenge-ios";
+			sourceTree = "<group>";
+		};
+		801ABFCD1FCD6FC100441769 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		801ABFCE1FCD6FC600441769 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		801ABFCF1FCD6FCB00441769 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				801ABFBD1FCD6F4000441769 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		801ABFD01FCD6FD200441769 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		801ABFD11FCD6FDF00441769 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +162,6 @@
 			files = (
 				801ABFC61FCD6F4000441769 /* LaunchScreen.storyboard in Resources */,
 				801ABFC31FCD6F4000441769 /* Assets.xcassets in Resources */,
-				801ABFC11FCD6F4000441769 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,14 +180,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		801ABFBF1FCD6F4000441769 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				801ABFC01FCD6F4000441769 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		801ABFC41FCD6F4000441769 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
