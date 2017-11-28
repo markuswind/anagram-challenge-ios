@@ -23,21 +23,6 @@ class AnagramSearchViewController: UIViewController {
     return UIBarButtonItem(title: title, style: style, target: self, action: #selector(historyButtonPressed))
   }()
 
-  override lazy var inputView: AnagramSearchInputView = { [weak self] in
-    let anagramSearchInputView = AnagramSearchInputView()
-    anagramSearchInputView.delegate = self
-
-    return anagramSearchInputView
-  }()
-
-  private lazy var resultView: AnagramSearchResultView = { [weak self] in
-    let anagramSearchResultView = AnagramSearchResultView()
-    anagramSearchResultView.tableView.delegate = self
-    anagramSearchResultView.tableView.dataSource = self
-
-    return anagramSearchResultView
-  }()
-
   // MARK: - Lifecycle
 
   init(withViewModel: AnagramSearchViewModel) {
@@ -55,36 +40,21 @@ class AnagramSearchViewController: UIViewController {
     super.viewDidLoad()
 
     configureScreen()
-    configureInputViewConstraints()
-    configureResultViewConstraints()
+    configureView()
   }
 
   private func configureScreen() {
     navigationItem.title = "Search Anagrams"
     navigationItem.rightBarButtonItem = historyButton
-
-    view.backgroundColor = StyleConstants.colors.background
   }
 
-  // MARK: - Constraints configuration
+  private func configureView() {
+    let anagramSearchView = AnagramSearchView()
+    anagramSearchView.inputView.delegate = self
+    anagramSearchView.resultView.tableView.delegate = self
+    anagramSearchView.resultView.tableView.dataSource = self
 
-  private func configureInputViewConstraints() {
-    let topConstraint = NSLayoutConstraint(item: inputView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0)
-    let rightConstraint = NSLayoutConstraint(item: inputView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0)
-    let leftConstraint = NSLayoutConstraint(item: inputView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 0)
-
-    view.addSubview(inputView)
-    view.addConstraints([topConstraint, rightConstraint, leftConstraint])
-  }
-
-  private func configureResultViewConstraints() {
-    let topConstraint = NSLayoutConstraint(item: resultView, attribute: .top, relatedBy: .equal, toItem: inputView, attribute: .bottom, multiplier: 1, constant: 0)
-    let rightConstraint = NSLayoutConstraint(item: resultView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0)
-    let bottomConstraint = NSLayoutConstraint(item: resultView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
-    let leftConstraint = NSLayoutConstraint(item: resultView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 0)
-
-    view.addSubview(resultView)
-    view.addConstraints([topConstraint, rightConstraint, bottomConstraint, leftConstraint])
+    view = anagramSearchView
   }
 
   // MARK: - User interaction
@@ -120,8 +90,12 @@ class AnagramSearchViewController: UIViewController {
 extension AnagramSearchViewController: AnagramSearchInputViewDelegate, AnagramSearchHistoryViewControllerDelegate {
 
   func searchButtonPressed(_ sender: UIButton?) {
-    inputView.textField.endEditing(true)
-    viewModel.setNewWord(word: inputView.textField.text!, completion: reloadResultViews)
+    guard let view = view as? AnagramSearchView else {
+      fatalError("AnagramSearchViewController's view needs to be a subclass of AnagramSearchView")
+    }
+
+    view.inputView.textField.endEditing(true)
+    viewModel.setNewWord(word: view.inputView.textField.text!, completion: reloadResultViews)
   }
 
   func openCheckerButtonPressed(_ sender: UIButton?) {
@@ -129,17 +103,25 @@ extension AnagramSearchViewController: AnagramSearchInputViewDelegate, AnagramSe
   }
 
   func setWordAndCheckForAnagrams(word: String) {
-    inputView.textField.text = word
+    guard let view = view as? AnagramSearchView else {
+      fatalError("AnagramSearchViewController's view needs to be a subclass of AnagramSearchView")
+    }
+
+    view.inputView.textField.text = word
     viewModel.setNewWord(word: word, completion: reloadResultViews)
   }
 
   private func reloadResultViews() {
-    resultView.tableView.reloadData()
-    resultView.tableView.layoutIfNeeded()
-    resultView.tableView.setContentOffset(.zero, animated: true)
+    guard let view = view as? AnagramSearchView else {
+      fatalError("AnagramSearchViewController's view needs to be a subclass of AnagramSearchView")
+    }
 
-    resultView.wordLengthLabel.text = "Length:\n \(viewModel.mostRecentWord().count)"
-    resultView.resultCountLabel.text = "Count:\n \(viewModel.totalNumberOfAnagrams)"
+    view.resultView.tableView.reloadData()
+    view.resultView.tableView.layoutIfNeeded()
+    view.resultView.tableView.setContentOffset(.zero, animated: true)
+
+    view.resultView.wordLengthLabel.text = "Length:\n \(viewModel.mostRecentWord().count)"
+    view.resultView.resultCountLabel.text = "Count:\n \(viewModel.totalNumberOfAnagrams)"
   }
 
 }
@@ -149,7 +131,11 @@ extension AnagramSearchViewController: AnagramSearchInputViewDelegate, AnagramSe
 extension AnagramSearchViewController: UITableViewDelegate {
 
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-    guard let currentItem = resultView.tableView.indexPathsForVisibleRows?.last?.row else {
+    guard let view = view as? AnagramSearchView else {
+      fatalError("AnagramSearchViewController's view needs to be a subclass of AnagramSearchView")
+    }
+
+    guard let currentItem = view.resultView.tableView.indexPathsForVisibleRows?.last?.row else {
       return
     }
 
@@ -164,12 +150,16 @@ extension AnagramSearchViewController: UITableViewDelegate {
   }
 
   private func insertNewRowsIntoTableView() {
-    let numberOfRows = resultView.tableView.numberOfRows(inSection: 0)
+    guard let view = view as? AnagramSearchView else {
+      fatalError("AnagramSearchViewController's view needs to be a subclass of AnagramSearchView")
+    }
+
+    let numberOfRows = view.resultView.tableView.numberOfRows(inSection: 0)
     let indexPaths = (numberOfRows..<viewModel.anagramsData.count).map { IndexPath(row: $0, section: 0) }
 
-    resultView.tableView.beginUpdates()
-    resultView.tableView.insertRows(at: indexPaths, with: .none)
-    resultView.tableView.endUpdates()
+    view.resultView.tableView.beginUpdates()
+    view.resultView.tableView.insertRows(at: indexPaths, with: .none)
+    view.resultView.tableView.endUpdates()
   }
 
 }
