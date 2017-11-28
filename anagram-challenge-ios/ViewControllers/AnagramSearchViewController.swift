@@ -16,11 +16,11 @@ class AnagramSearchViewController: UIViewController {
 
   // MARK: - View initializers
 
-  private lazy var buttonC: UIBarButtonItem = {
+  private lazy var historyButton: UIBarButtonItem = {
     let title = "History"
     let style: UIBarButtonItemStyle = .plain
 
-    return UIBarButtonItem(title: title, style: style, target: self, action: #selector(buttonCPressed))
+    return UIBarButtonItem(title: title, style: style, target: self, action: #selector(historyButtonPressed))
   }()
 
   override lazy var inputView: AnagramSearchInputView = { [weak self] in
@@ -61,7 +61,7 @@ class AnagramSearchViewController: UIViewController {
 
   private func configureScreen() {
     navigationItem.title = "Search Anagrams"
-    navigationItem.rightBarButtonItem = buttonC
+    navigationItem.rightBarButtonItem = historyButton
 
     view.backgroundColor = StyleConstants.colors.background
   }
@@ -89,7 +89,7 @@ class AnagramSearchViewController: UIViewController {
 
   // MARK: - User interaction
 
-  @objc private func buttonCPressed() {
+  @objc private func historyButtonPressed() {
     pushAnagramSearchHistoryViewController()
   }
 
@@ -119,12 +119,12 @@ class AnagramSearchViewController: UIViewController {
 
 extension AnagramSearchViewController: AnagramSearchInputViewDelegate, AnagramSearchHistoryViewControllerDelegate {
 
-  func buttonAPressed(_ sender: UIButton?) {
+  func searchButtonPressed(_ sender: UIButton?) {
     inputView.textField.endEditing(true)
     viewModel.setNewWord(word: inputView.textField.text!, completion: reloadResultViews)
   }
 
-  func buttonBPressed(_ sender: UIButton?) {
+  func openCheckerButtonPressed(_ sender: UIButton?) {
     pushAnagramCheckViewController()
   }
 

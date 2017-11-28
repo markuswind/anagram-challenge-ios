@@ -9,8 +9,8 @@
 import UIKit
 
 protocol AnagramSearchInputViewDelegate {
-  func buttonAPressed(_ sender: UIButton?)
-  func buttonBPressed(_ sender: UIButton?)
+  func searchButtonPressed(_ sender: UIButton?)
+  func openCheckerButtonPressed(_ sender: UIButton?)
 }
 
 class AnagramSearchInputView: UIView {
@@ -28,18 +28,18 @@ class AnagramSearchInputView: UIView {
     return normalTextField
     }()
 
-  private let buttonA: NormalButton = {
+  private let searchButton: NormalButton = {
     let normalButton = NormalButton()
     normalButton.setTitle("Search", for: .normal)
-    normalButton.addTarget(self, action: #selector(buttonAPressed(_:)), for: .touchUpInside)
+    normalButton.addTarget(self, action: #selector(searchButtonPressed(_:)), for: .touchUpInside)
 
     return normalButton
   }()
 
-  private let buttonB: NormalButton = {
+  private let openCheckerButton: NormalButton = {
     let normalButton = NormalButton()
     normalButton.setTitle("Open Checker", for: .normal)
-    normalButton.addTarget(self, action: #selector(buttonBPressed(_:)), for: .touchUpInside)
+    normalButton.addTarget(self, action: #selector(openCheckerButtonPressed(_:)), for: .touchUpInside)
 
     return normalButton
   }()
@@ -52,8 +52,8 @@ class AnagramSearchInputView: UIView {
     translatesAutoresizingMaskIntoConstraints = false
 
     configureTextFieldConstraints()
-    configureButtonAContraints()
-    configureButtonBContraints()
+    configureSearchButtonContraints()
+    configureOpenCheckerButtonContraints()
     configureBottomConstraint()
   }
 
@@ -72,39 +72,39 @@ class AnagramSearchInputView: UIView {
     addConstraints([topConstraint, rightConstraint, leftConstraint])
   }
 
-  private func configureButtonAContraints() {
-    let topConstraint = NSLayoutConstraint(item: buttonA, attribute: .top, relatedBy: .equal, toItem: textField, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
-    let leftConstraint = NSLayoutConstraint(item: buttonA, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: StyleConstants.margins.medium)
+  private func configureSearchButtonContraints() {
+    let topConstraint = NSLayoutConstraint(item: searchButton, attribute: .top, relatedBy: .equal, toItem: textField, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
+    let leftConstraint = NSLayoutConstraint(item: searchButton, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: StyleConstants.margins.medium)
 
-    addSubview(buttonA)
+    addSubview(searchButton)
     addConstraints([topConstraint, leftConstraint])
   }
 
-  private func configureButtonBContraints() {
-    let widthConstraint = NSLayoutConstraint(item: buttonB, attribute: .width, relatedBy: .equal, toItem: buttonA, attribute: .width, multiplier: 1, constant: 0)
+  private func configureOpenCheckerButtonContraints() {
+    let widthConstraint = NSLayoutConstraint(item: openCheckerButton, attribute: .width, relatedBy: .equal, toItem: searchButton, attribute: .width, multiplier: 1, constant: 0)
 
-    let topConstraint = NSLayoutConstraint(item: buttonB, attribute: .top, relatedBy: .equal, toItem: buttonA, attribute: .top, multiplier: 1, constant: 0)
-    let rightConstraint = NSLayoutConstraint(item: buttonB, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: -StyleConstants.margins.medium)
-    let leftConstraint = NSLayoutConstraint(item: buttonB, attribute: .left, relatedBy: .equal, toItem: buttonA, attribute: .right, multiplier: 1, constant: StyleConstants.margins.medium)
+    let topConstraint = NSLayoutConstraint(item: openCheckerButton, attribute: .top, relatedBy: .equal, toItem: searchButton, attribute: .top, multiplier: 1, constant: 0)
+    let rightConstraint = NSLayoutConstraint(item: openCheckerButton, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: -StyleConstants.margins.medium)
+    let leftConstraint = NSLayoutConstraint(item: openCheckerButton, attribute: .left, relatedBy: .equal, toItem: searchButton, attribute: .right, multiplier: 1, constant: StyleConstants.margins.medium)
 
-    addSubview(buttonB)
+    addSubview(openCheckerButton)
     addConstraints([widthConstraint, topConstraint, rightConstraint, leftConstraint])
   }
 
   private func configureBottomConstraint() {
-    let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: buttonB, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
+    let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: openCheckerButton, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
 
     addConstraint(bottomConstraint)
   }
 
   // MARK: - User interaction
 
-  @objc private func buttonAPressed(_ sender: UIButton?) {
-    delegate?.buttonAPressed(sender)
+  @objc private func searchButtonPressed(_ sender: UIButton?) {
+    delegate?.searchButtonPressed(sender)
   }
 
-  @objc private func buttonBPressed(_ sender: UIButton?) {
-    delegate?.buttonBPressed(sender)
+  @objc private func openCheckerButtonPressed(_ sender: UIButton?) {
+    delegate?.openCheckerButtonPressed(sender)
   }
 
 }

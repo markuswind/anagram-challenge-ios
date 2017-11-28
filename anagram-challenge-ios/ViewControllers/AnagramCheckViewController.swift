@@ -30,10 +30,10 @@ class AnagramCheckViewController: UIViewController {
     return label
   }()
 
-  private let submitButton: NormalButton = {
+  private let checkButton: NormalButton = {
     let normalButton = NormalButton()
     normalButton.setTitle("Check", for: .normal)
-    normalButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    normalButton.addTarget(self, action: #selector(checkButtonPressed(_:)), for: .touchUpInside)
 
     return normalButton
   }()
@@ -64,7 +64,7 @@ class AnagramCheckViewController: UIViewController {
     configureScreen()
     configureInfoLabelConstraints()
     configureTextFieldConstraints()
-    configureButtonConstraints()
+    configureCheckButtonConstraints()
     configureIsAnagramLabelConstraints()
   }
 
@@ -94,18 +94,18 @@ class AnagramCheckViewController: UIViewController {
     view.addConstraints([topConstraint, rightConstraint, leftConstraint])
   }
 
-  private func configureButtonConstraints() {
-    let topConstraint = NSLayoutConstraint(item: submitButton, attribute: .top, relatedBy: .equal, toItem: textField, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
-    let rightConstraint = NSLayoutConstraint(item: submitButton, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: -StyleConstants.margins.medium)
-    let leftConstraint = NSLayoutConstraint(item: submitButton, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: StyleConstants.margins.medium)
+  private func configureCheckButtonConstraints() {
+    let topConstraint = NSLayoutConstraint(item: checkButton, attribute: .top, relatedBy: .equal, toItem: textField, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
+    let rightConstraint = NSLayoutConstraint(item: checkButton, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: -StyleConstants.margins.medium)
+    let leftConstraint = NSLayoutConstraint(item: checkButton, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: StyleConstants.margins.medium)
 
-    view.addSubview(submitButton)
+    view.addSubview(checkButton)
     view.addConstraints([topConstraint, rightConstraint, leftConstraint])
   }
 
   private func configureIsAnagramLabelConstraints() {
     let centerConstraint = NSLayoutConstraint(item: isAnagramLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
-    let topConstraint = NSLayoutConstraint(item: isAnagramLabel, attribute: .top, relatedBy: .equal, toItem: submitButton, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
+    let topConstraint = NSLayoutConstraint(item: isAnagramLabel, attribute: .top, relatedBy: .equal, toItem: checkButton, attribute: .bottom, multiplier: 1, constant: StyleConstants.margins.medium)
 
     view.addSubview(isAnagramLabel)
     view.addConstraints([centerConstraint, topConstraint])
@@ -113,7 +113,7 @@ class AnagramCheckViewController: UIViewController {
 
   // MARK: - User interaction
 
-  @objc private func buttonPressed(_: UIButton?) {
+  @objc private func checkButtonPressed(_: UIButton?) {
     let word = textField.text
 
     viewModel.isAnagramOfCurrentWord(word: word!, completion: updateIsAnagramLabel)
