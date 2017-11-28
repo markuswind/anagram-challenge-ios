@@ -24,6 +24,7 @@
 		80B7DFDC1FCD79CE003B6E56 /* AnagramSearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7DFDB1FCD79CE003B6E56 /* AnagramSearchHistoryViewController.swift */; };
 		80D76FFE1FCD7BEB00B6E8A8 /* AnagramCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D76FFD1FCD7BEB00B6E8A8 /* AnagramCheckViewController.swift */; };
 		80D770001FCD8C8400B6E8A8 /* AnagramSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D76FFF1FCD8C8400B6E8A8 /* AnagramSearchView.swift */; };
+		80D770021FCD93AE00B6E8A8 /* AnagramCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D770011FCD93AE00B6E8A8 /* AnagramCheckView.swift */; };
 		80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		80B7DFDB1FCD79CE003B6E56 /* AnagramSearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchHistoryViewController.swift; sourceTree = "<group>"; };
 		80D76FFD1FCD7BEB00B6E8A8 /* AnagramCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckViewController.swift; sourceTree = "<group>"; };
 		80D76FFF1FCD8C8400B6E8A8 /* AnagramSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchView.swift; sourceTree = "<group>"; };
+		80D770011FCD93AE00B6E8A8 /* AnagramCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckView.swift; sourceTree = "<group>"; };
 		80E447841FCD71DD00BC1C68 /* AnagramSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				80B7DFD41FCD74AF003B6E56 /* AnagramSearch */,
 				80B7DFD01FCD744D003B6E56 /* NormalButton.swift */,
 				80B7DFD21FCD745A003B6E56 /* NormalTextField.swift */,
+				80D770011FCD93AE00B6E8A8 /* AnagramCheckView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				80B7DFD61FCD74DE003B6E56 /* ResultHeaderLabel.swift in Sources */,
 				80B7DFD31FCD745A003B6E56 /* NormalTextField.swift in Sources */,
+				80D770021FCD93AE00B6E8A8 /* AnagramCheckView.swift in Sources */,
 				80E447851FCD71DD00BC1C68 /* AnagramSearchViewModel.swift in Sources */,
 				80B7DFDC1FCD79CE003B6E56 /* AnagramSearchHistoryViewController.swift in Sources */,
 				80B7DFD81FCD74F9003B6E56 /* AnagramSearchInputView.swift in Sources */,
