@@ -19,9 +19,9 @@ class anagram_challenge_iosTests: XCTestCase {
   }
     
   func testAnagramSearchViewModel() {
-    self.measure {
-      let anagramSearchViewModel = AnagramSearchViewModel()
+    let anagramSearchViewModel = AnagramSearchViewModel()
 
+    self.measure {
       anagramSearchViewModel.setNewWord(word: "ABC") {
         XCTAssertTrue(anagramSearchViewModel.totalNumberOfAnagrams == 6)
         XCTAssertTrue(anagramSearchViewModel.anagramsData.count == 6)
@@ -49,12 +49,14 @@ class anagram_challenge_iosTests: XCTestCase {
   func testAnagramCheckViewModel() {
     let anagramCheckViewModel = AnagramCheckViewModel(word: "Apple")
 
-    anagramCheckViewModel.isAnagramOfCurrentWord(word: "Apple") { (result) in
-      XCTAssert(result == true)
-    }
+    self.measure {
+      anagramCheckViewModel.isAnagramOfCurrentWord(word: "Apple") { (result) in
+        XCTAssert(result == true)
+      }
 
-    anagramCheckViewModel.isAnagramOfCurrentWord(word: "Banana") { (result) in
-      XCTAssert(result == false)
+      anagramCheckViewModel.isAnagramOfCurrentWord(word: "Banana") { (result) in
+        XCTAssert(result == false)
+      }
     }
   }
 
