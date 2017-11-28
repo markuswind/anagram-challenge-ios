@@ -14,14 +14,14 @@ class AnagramSearchResultView: UIView {
 
   public let wordLengthLabel: ResultHeaderLabel = {
     let resultHeaderLabel = ResultHeaderLabel()
-    resultHeaderLabel.text = "Lengte:\n0"
+    resultHeaderLabel.text = "Length:\n0"
 
     return resultHeaderLabel
   }()
 
   public let resultCountLabel: ResultHeaderLabel = {
     let resultHeaderLabel = ResultHeaderLabel()
-    resultHeaderLabel.text = "Aantal:\n0"
+    resultHeaderLabel.text = "Count:\n0"
 
     return resultHeaderLabel
   }()

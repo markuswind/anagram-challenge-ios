@@ -23,7 +23,7 @@ class AnagramSearchHistoryViewController: UITableViewController {
   // MARK: - View initializers
 
   private lazy var closeButton: UIBarButtonItem = {
-    let title = "Sluiten"
+    let title = "Close"
     let style: UIBarButtonItemStyle = .plain
 
     return UIBarButtonItem(title: title, style: style, target: self, action: #selector(closeButtonPressed))
@@ -51,7 +51,7 @@ class AnagramSearchHistoryViewController: UITableViewController {
   }
 
   private func configureNavigationBar() {
-    navigationItem.title = "Scherm 3"
+    navigationItem.title = "Search History"
     navigationItem.rightBarButtonItem = closeButton
   }
 

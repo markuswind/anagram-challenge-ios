@@ -17,7 +17,7 @@ class AnagramSearchViewController: UIViewController {
   // MARK: - View initializers
 
   private lazy var buttonC: UIBarButtonItem = {
-    let title = "Knop C"
+    let title = "History"
     let style: UIBarButtonItemStyle = .plain
 
     return UIBarButtonItem(title: title, style: style, target: self, action: #selector(buttonCPressed))
@@ -60,7 +60,7 @@ class AnagramSearchViewController: UIViewController {
   }
 
   private func configureScreen() {
-    navigationItem.title = "Scherm 1"
+    navigationItem.title = "Search Anagrams"
     navigationItem.rightBarButtonItem = buttonC
 
     view.backgroundColor = StyleConstants.colors.background
@@ -138,8 +138,8 @@ extension AnagramSearchViewController: AnagramSearchInputViewDelegate, AnagramSe
     resultView.tableView.layoutIfNeeded()
     resultView.tableView.setContentOffset(.zero, animated: true)
 
-    resultView.wordLengthLabel.text = "Lengte:\n \(viewModel.mostRecentWord().count)"
-    resultView.resultCountLabel.text = "Aantal:\n \(viewModel.totalNumberOfAnagrams)"
+    resultView.wordLengthLabel.text = "Length:\n \(viewModel.mostRecentWord().count)"
+    resultView.resultCountLabel.text = "Count:\n \(viewModel.totalNumberOfAnagrams)"
   }
 
 }

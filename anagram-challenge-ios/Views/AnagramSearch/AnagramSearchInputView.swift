@@ -30,7 +30,7 @@ class AnagramSearchInputView: UIView {
 
   private let buttonA: NormalButton = {
     let normalButton = NormalButton()
-    normalButton.setTitle("Knop A", for: .normal)
+    normalButton.setTitle("Search", for: .normal)
     normalButton.addTarget(self, action: #selector(buttonAPressed(_:)), for: .touchUpInside)
 
     return normalButton
@@ -38,7 +38,7 @@ class AnagramSearchInputView: UIView {
 
   private let buttonB: NormalButton = {
     let normalButton = NormalButton()
-    normalButton.setTitle("Knop B", for: .normal)
+    normalButton.setTitle("Open Checker", for: .normal)
     normalButton.addTarget(self, action: #selector(buttonBPressed(_:)), for: .touchUpInside)
 
     return normalButton

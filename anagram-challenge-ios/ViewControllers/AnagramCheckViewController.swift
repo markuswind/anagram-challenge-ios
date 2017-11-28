@@ -25,14 +25,14 @@ class AnagramCheckViewController: UIViewController {
     label.translatesAutoresizingMaskIntoConstraints = false
     label.lineBreakMode = .byWordWrapping
     label.numberOfLines = 0
-    label.text = "Controleer of het opgegeven woord een anagram is van \"\(self!.viewModel.word!)\""
+    label.text = "Check if entered word is an anagram of \"\(self!.viewModel.word!)\""
 
     return label
   }()
 
   private let submitButton: NormalButton = {
     let normalButton = NormalButton()
-    normalButton.setTitle("Controleer", for: .normal)
+    normalButton.setTitle("Check", for: .normal)
     normalButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
 
     return normalButton
@@ -69,7 +69,7 @@ class AnagramCheckViewController: UIViewController {
   }
 
   private func configureScreen() {
-    navigationItem.title = "Scherm 2"
+    navigationItem.title = "Anagram Checker"
     view.backgroundColor = StyleConstants.colors.background
   }
 
@@ -122,7 +122,7 @@ class AnagramCheckViewController: UIViewController {
   // MARK: - View interaction
 
   private func updateIsAnagramLabel(isAnagram: Bool) {
-    isAnagramLabel.text = isAnagram ? "JA" : "NEE"
+    isAnagramLabel.text = isAnagram ? "YES" : "NO"
   }
 
 }
