@@ -104,20 +104,20 @@ class AnagramSearchViewController: UIViewController {
 
   private func pushAnagramSearchHistoryViewController() {
     let viewModel = AnagramSearchHistoryViewModel(recentWords: self.viewModel.recentWordsData)
-//    let viewController = AnagramSearchHistoryViewController(withViewModel: viewModel)
-//    viewController.delegate = self
+    let viewController = AnagramSearchHistoryViewController(withViewModel: viewModel)
+    viewController.delegate = self
 
-//    let navigationController = NavigationController(rootViewController: viewController)
-//    navigationController.modalPresentationStyle = .overCurrentContext
+    let navigationController = NavigationController(rootViewController: viewController)
+    navigationController.modalPresentationStyle = .overCurrentContext
 
-//    self.navigationController?.present(navigationController, animated: true, completion: nil)
+    self.navigationController?.present(navigationController, animated: true, completion: nil)
   }
 
 }
 
 // MARK: - AnagramSearchInputViewDelegate + AnagramSearchHistoryViewControllerDelegate
 
-extension AnagramSearchViewController: AnagramSearchInputViewDelegate {
+extension AnagramSearchViewController: AnagramSearchInputViewDelegate, AnagramSearchHistoryViewControllerDelegate {
 
   func buttonAPressed(_ sender: UIButton?) {
     inputView.textField.endEditing(true)
