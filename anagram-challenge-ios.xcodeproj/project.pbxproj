@@ -135,12 +135,36 @@
 		801ABFD11FCD6FDF00441769 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				80B7DFD41FCD74AF003B6E56 /* AnagramSearch */,
-				80B7DFD01FCD744D003B6E56 /* NormalButton.swift */,
-				80B7DFD21FCD745A003B6E56 /* NormalTextField.swift */,
-				80D770011FCD93AE00B6E8A8 /* AnagramCheckView.swift */,
+				809228551FCD9D7E00B212B0 /* Form */,
+				809228531FCD9D5800B212B0 /* Screens */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		809228531FCD9D5800B212B0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				809228541FCD9D7000B212B0 /* AnagramCheck */,
+				80B7DFD41FCD74AF003B6E56 /* AnagramSearch */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		809228541FCD9D7000B212B0 /* AnagramCheck */ = {
+			isa = PBXGroup;
+			children = (
+				80D770011FCD93AE00B6E8A8 /* AnagramCheckView.swift */,
+			);
+			path = AnagramCheck;
+			sourceTree = "<group>";
+		};
+		809228551FCD9D7E00B212B0 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				80B7DFD01FCD744D003B6E56 /* NormalButton.swift */,
+				80B7DFD21FCD745A003B6E56 /* NormalTextField.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		80B7DFD41FCD74AF003B6E56 /* AnagramSearch */ = {
